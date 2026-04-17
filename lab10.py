@@ -30,8 +30,6 @@ async def check_for_known_devices():
 
     return nearby_known_devices
 
-import shelve
-
 def log_devices(devices):
     with shelve.open( "device_log" ) as db:
         for name, address in devices.items():
